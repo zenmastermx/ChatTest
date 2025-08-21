@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+  <title>Salesforce Messaging Test</title>
+
+</head>
+<body>
+  <h1>Salesforce Messaging Deployment Test</h1>
+  <p>Open the chat widget in the bottom corner to see your pre-chat form.</p>
+
+  <script type='text/javascript'>
+	function initEmbeddedMessaging() {
+		try {
+			embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
+
+			embeddedservice_bootstrap.init(
+				'00DNq00000BwmfW',
+				'Enrollment',
+				'https://usahs--qa.sandbox.my.site.com/ESWEnrollment1753813388333',
+				{
+					scrt2URL: 'https://usahs--qa.sandbox.my.salesforce-scrt.com'
+				}
+			);
+		} catch (err) {
+			console.error('Error loading Embedded Messaging: ', err);
+		}
+	};
+</script>
+<script type='text/javascript' src='https://usahs--qa.sandbox.my.site.com/ESWEnrollment1753813388333/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
+</body>
+</html>
